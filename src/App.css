@@ -1,5 +1,69 @@
+*{
+  font-family: orbitron;
+}
 .App {
   text-align: center;
+  /* padding-top: 300px; */
+  color: #61dafb;
+}
+
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button {
+  font-family: orbitron;
+  font-size: large;
+
+  /* position: absolute; */
+  top:50%;
+  background-color: #61dafb;
+  color: black;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+  margin-bottom: 1rem;
+
+}
+
+.button {
+  display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.dot {
+  height: 500px;
+  width: 500px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.triangle {
+  display: flex;
+   align-items: center;
+  justify-content: center; 
+}
+
+.arrow-down {
+  width: 8x; 
+  height: 8px; 
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  
+  border-top: 160px solid darkblue;
 }
 
 .App-logo {
@@ -13,7 +77,7 @@
   }
 }
 
-.App-header {
+.background {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;

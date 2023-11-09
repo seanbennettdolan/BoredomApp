@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import fetchActivity from './fetchActivity';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [activity, setActivity] = useState("");
+
+
+  let handleClick = async () => {
+    const result = await fetchActivity();
+    console.log(result.activity);
+    setActivity(result.activity)
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <span className="dot">
+        {/* <div className="triangle">
+        <span className="arrow-down">  */}
+        <div className="button">
+     <button onClick={handleClick}>Are you bored?</button>
+     <div> {activity} </div>
+     </div> 
+        {/* </span>
+        </div> */}
+   
+    
+     </span>
     </div>
   );
 }
